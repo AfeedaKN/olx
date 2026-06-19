@@ -16,13 +16,12 @@ import {
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAqoB4MJF-NogxENKJ9bVrEvb2iqNhAeS8",
-  authDomain: "olx-clone-c1caf.firebaseapp.com",
-  projectId: "olx-clone-c1caf",
-  storageBucket: "olx-clone-c1caf.firebasestorage.app",
-  messagingSenderId: "435143495242",
-  appId: "1:435143495242:web:752c06116f98e90ac960b3",
-  measurementId: "G-JBTV03LYYN"
+  apiKey: "AIzaSyDkbPdMrWo6zhZHClqqDaBkAgcoCKsT1UQ",
+  authDomain: "olx-clone-ea215.firebaseapp.com",
+  projectId: "olx-clone-ea215",
+  storageBucket: "olx-clone-ea215.firebasestorage.app",
+  messagingSenderId: "736901705011",
+  appId: "1:736901705011:web:e74a55a4ad9469cc16e246"
 };
 
 

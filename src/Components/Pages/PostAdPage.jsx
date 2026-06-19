@@ -73,7 +73,7 @@ const PostAdPage = () => {
         if (!title.trim() || !category || !price || !description.trim()) {
             toast.warn('Please fill out all required fields.');
             setSubmitting(false);
-            return;
+            return; 
         }
 
         if (!image) {

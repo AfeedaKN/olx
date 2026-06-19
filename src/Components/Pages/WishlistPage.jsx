@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Navbar from '../Navbar/Navbar'
-import Login from '../Modal/Login'
-import Sell from '../Modal/Sell'
+// import Login from '../Modal/Login'
+// import Sell from '../Modal/Sell'
 import Card from '../Card/Card'
 import { useWishlist } from '../Context/Wishlist'
 import { ItemsContext } from '../Context/Item'
@@ -28,17 +28,17 @@ const WishlistPage = () => {
     return (
         <div>
             <Navbar
-                toggleModal={toggleModal}
-                toggleModalSell={toggleModalSell}
+                // toggleModal={toggleModal}
+                // toggleModalSell={toggleModalSell}
                 searchQuery={searchQuery}
                 setSearchQuery={setSearchQuery}
             />
-            <Login toggleModal={toggleModal} status={openModal} />
-            <Sell
+            {/* <Login toggleModal={toggleModal} status={openModal} /> */}
+            {/* <Sell
                 setItems={itemsCtx?.setItems}
                 toggleModalSell={toggleModalSell}
                 status={openModalSell}
-            />
+            /> */}
 
             <div className="pt-5">
                 <div className="px-5 sm:px-15 md:px-30 lg:px-40 pt-10">

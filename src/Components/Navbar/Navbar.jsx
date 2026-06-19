@@ -24,9 +24,9 @@ const Navbar = (props) => {
 
     const handleSearchChange = (e) => {
         setSearchQuery(e.target.value);
-        if (location.pathname !== '/') {
-            navigate('/');
-        }
+        // if (location.pathname !== '/') {
+        //     navigate('/');
+        // }
     }
 
     const handleLogout = async () => {

@@ -41,27 +41,33 @@ const MyAdsPage = () => {
         return () => unsubscribe();
     }, [user, navigate]);
 
-    const handleDelete = async (id) => {
-        const result = await Swal.fire({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this ad deletion!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#002f34',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
-        });
+const handleDelete = async (id) => {
+    const result = await Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this ad deletion!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#002f34',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+    });
 
-        if (result.isConfirmed) {
-            try {
-                await deleteProduct(id);
-                setAds(ads.filter(ad => ad.id !== id));
-                toast.success("Ad deleted successfully");
-            } catch (error) {
-                toast.error("Failed to delete ad");
-            }
+    if (result.isConfirmed) {
+        try {
+            await deleteProduct(id);
+
+            setAds(ads.filter(ad => ad.id !== id));
+
+            const wishlist = JSON.parse(localStorage.getItem("olx_wishlist")) || [];
+            const updatedWishlist = wishlist.filter(item => item.id !== id);
+            localStorage.setItem("olx_wishlist", JSON.stringify(updatedWishlist));
+
+            toast.success("Ad deleted successfully");
+        } catch (error) {
+            toast.error("Failed to delete ad");
         }
-    };
+    }
+};
 
     const handleEdit = (ad) => {
         setEditingAd({ ...ad });
